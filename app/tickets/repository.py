@@ -17,13 +17,15 @@ class TicketRepository:
         return ticket
 
     def find(self) -> list[Ticket]:
-        return self.db.query(Ticket).all()
+        return self.db.query(Ticket).all()  # type: ignore[no-any-return]
 
     def get(self, ticket_id: str) -> Ticket | None:
-        return self.db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        return (  # type: ignore[no-any-return]
+            self.db.query(Ticket).filter(Ticket.id == ticket_id).first()
+        )
 
     def update(self, ticket_id: str, update: TicketUpdateSchema) -> Ticket | None:
-        self.db.query(Ticket).filter(Ticket.id == ticket_id).update(update.model_dump())  # type: ignore[arg-type]
+        self.db.query(Ticket).filter(Ticket.id == ticket_id).update(update.model_dump())
         self.db.commit()
 
         return self.get(ticket_id)
@@ -32,7 +34,7 @@ class TicketRepository:
         ticket = self.get(ticket_id)
         if not ticket:
             return None
-        ticket.status = TicketStatus.CLOSED  # type: ignore[assignment]
+        ticket.status = TicketStatus.CLOSED
         self.db.commit()
         self.db.refresh(ticket)
         return ticket

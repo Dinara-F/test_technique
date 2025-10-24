@@ -1,6 +1,10 @@
 from app.tickets.models import Ticket, TicketStatus
 from app.tickets.repository import TicketRepository
-from app.tickets.schemas import TicketCreateSchema, TicketUpdateSchema, TicketStatusSchema
+from app.tickets.schemas import (
+    TicketCreateSchema,
+    TicketStatusSchema,
+    TicketUpdateSchema,
+)
 
 
 def test_create_ticket(repo: TicketRepository) -> None:

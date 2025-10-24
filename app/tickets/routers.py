@@ -20,7 +20,7 @@ def create_ticket(
 def find_tickets(
     repo: TicketRepository = Depends(TicketRepository),
 ) -> list[TicketSchema]:
-    return repo.find()  # type: ignore
+    return repo.find()
 
 
 @router.get("/{ticket_id}", response_model=TicketSchema)

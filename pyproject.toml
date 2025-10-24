@@ -27,6 +27,13 @@ pylint = "^4.0.2"
 pre-commit = "^4.3.0"
 pytest-cov = "^7.0.0"
 
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

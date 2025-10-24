@@ -22,7 +22,7 @@ class Ticket(Base):
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()), index=True)
     title = Column(String, nullable=False)
     description = Column(String, nullable=False)
-    status = Column(Enum(TicketStatus), default=TicketStatus.OPEN, nullable=False)  # type: ignore
+    status = Column(Enum(TicketStatus), default=TicketStatus.OPEN, nullable=False)
     created_at = Column(DateTime, default=datetime.now(timezone.utc))
 
     @classmethod
