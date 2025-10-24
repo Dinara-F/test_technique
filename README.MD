@@ -1,6 +1,7 @@
 # API de Gestion de Tickets
 
-![Python](https://img.shields.io/badge/python-3.11-blue) ![Build](https://img.shields.io/badge/build-passing-brightgreen) ![Coverage](https://codecov.io/gh/Dinara-F/test_technique/branch/master/graph/badge.svg)(https://codecov.io/gh/Dinara-F/test_technique) ![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-blue)
+![Python](https://img.shields.io/badge/python-3.11-blue) ![Build](https://img.shields.io/badge/build-passing-brightgreen) [![codecov.io](https://codecov.io/github/Dinara-F/test_technique/coverage.svg?branch=master)]
+(https://codecov.io/github/Dinara-F/test_technique?branch=master) ![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-blue)
 
 Cette application est une API REST pour la gestion de tickets développée avec FastAPI, utilisant SQLAlchemy et SQLite en mémoire. Elle inclut des tests unitaires, des validations de type avec mypy, et des outils de qualité de code (Black, isort, flake8, pre-commit). Elle permet de créer, consulter, mettre à jour et fermer des tickets. Chaque ticket contient : `id` (UUID), `title` (str), `description` (str), `status` (enum : `open`, `stalled`, `closed`), `created_at` (datetime). L’API propose une documentation automatique via Swagger (/docs) et ReDoc (/redoc).
 
