@@ -12,8 +12,8 @@ Cette application est une API REST pour la gestion de tickets développée avec 
 ## Installation
 1. Cloner le dépôt :
 ```bash
-git clone https://github.com/USERNAME/fastapi-tickets.git
-cd fastapi-tickets
+git git@github.com:Dinara-F/test_technique.git
+cd test_technique
 ```
 2. Installer les dépendances avec Poetry :
 ```bash
