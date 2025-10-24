@@ -24,3 +24,5 @@ poetry.lock
 
 # Logs
 *.log
+
+.coverage
