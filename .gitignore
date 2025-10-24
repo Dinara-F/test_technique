@@ -1,0 +1,26 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Poetry
+poetry.lock
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# cache
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log

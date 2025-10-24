@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "test-technique"
+version = "0.1.0"
+description = ""
+authors = ["Dinara Fatekhova <91627750+Dinara-F@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "test_technique"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.120.0"
+uvicorn = "^0.38.0"
+sqlalchemy = "^2.0.44"
+pydantic = "^2.12.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+httpx = "^0.28.1"
+pytest-freezegun = "^0.4.2"
+pytest-mock = "^3.15.1"
+mypy = "^1.18.2"
+flake8 = "^7.3.0"
+black = "^25.9.0"
+isort = "^7.0.0"
+pylint = "^4.0.2"
+pre-commit = "^4.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
