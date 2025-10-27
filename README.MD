@@ -17,11 +17,11 @@ cd test_technique
 ```
 2. Installer les dépendances avec Poetry :
 ```bash
-poetry install
+poetry install --no-root
 ```
 3. Activer l’environnement virtuel :
 ```bash
-poetry shell
+poetry env activate
 ```
 
 ## Lancer l’API
